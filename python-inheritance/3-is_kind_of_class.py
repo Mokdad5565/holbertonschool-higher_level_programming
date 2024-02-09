@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-'''function print if is class or object'''
+"""check if object is instance of class or subclass"""
 
 
 def is_kind_of_class(obj, a_class):
-    '''conditional'''
-    if not isinstance(obj, a_class):
-        return False
-    else:
-        '''return false or true'''
+    """return true is isinstance is true else false"""
+    x = isinstance(obj, a_class)
+    if x:
         return True
+    return False

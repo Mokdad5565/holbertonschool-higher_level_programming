@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''class'''
+"""empty class"""
 
 
 class BaseGeometry:
-    '''without instructions'''
+    """empty"""
     pass
