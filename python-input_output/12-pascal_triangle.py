@@ -1,16 +1,21 @@
 #!/usr/bin/python3
-'''function crated a pascal triangle'''
+"""Defines a Pascal's Triangle function."""
 
 
 def pascal_triangle(n):
-    """validation"""
+    """Represent Pascal's Triangle of size n.
+
+    Returns a list of lists of integers representing the triangle.
+    """
     if n <= 0:
         return []
-    '''matriz x matriz'''
-    triangle = [[1 for column in range(row)] for row in range(1, n + 1)]
-    '''iterates'''
-    for i in range(2, n):
-        for j in range(1, i):
-            triangle[i][j] = triangle[i - 1][j] + triangle[i - 1][j - 1]
-    '''return'''
-    return triangle
+
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles

@@ -1,9 +1,18 @@
 #!/usr/bin/python3
-'''function read txt'''
+""" Module that contains a function that reads from a file """
 
 
 def read_file(filename=""):
-    '''statement'''
-    with open(filename, "r", encoding="utf-8") as file:
-        '''read lines'''
-        print(file.read(), end="")
+    """ Function that reads from a file
+
+    Args:
+        filename: filename
+
+    Raises
+        Exception: when the file can be opened
+
+    """
+
+    with open(filename, 'r', encoding="utf-8") as f:
+        read_data = f.read()
+        print(read_data, end='')
