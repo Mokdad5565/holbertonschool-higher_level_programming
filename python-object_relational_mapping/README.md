@@ -1,1 +1,0 @@
-# more sql and python relational
